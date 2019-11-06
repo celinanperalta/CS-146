@@ -1,0 +1,11 @@
+body {
+	position: relative;
+    margin: 0;
+    padding: 10vw;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+#title {
+    margin-bottom: 5vw;
+}
