@@ -1,15 +1,22 @@
 body {
-	/* position: relative; */
+	position: relative;
     margin: 0;
     /* padding: 10vw; */
 	width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;             
     font-family: "Montserrat", sans-serif;
 }
 
-#signup-form {
+.nav {
+    position: relative;
+}
+
+.signup-form {
     margin: 0 auto;
+    height: 600px;
     width: 500px;
+    margin-top: 7vw;
+    font-size: 120%;
 }
 
 #title {
@@ -17,6 +24,7 @@ body {
 }
 
 #signup {
+
 }
 
 .form-group {
@@ -86,4 +94,27 @@ button:hover{
     cursor: pointer;
     background-color: #64beeb;
     transition: 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 999px) {
+    .signup-form {
+        /* font-size: 5.75rem;
+        margin-left: 5.75rem; */
+    }
+}
+
+@media only screen and (max-width: 998px) and (min-width: 400px) {
+    .signup-form {
+        /* font-size: 4rem;
+        margin-left: 4rem; */
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    .signup-form {
+        margin: 0 auto;
+        margin-top: 10vw;
+        padding: 5vw;
+        width: auto;
+    }
 }
