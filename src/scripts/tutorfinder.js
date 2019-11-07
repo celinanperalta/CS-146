@@ -19,6 +19,11 @@ function decodeQueryString(qs) {
 window.addEventListener("load", function(){
     var url = window.location.href;
     var objs = decodeQueryString(url);
-    
+    var name = objs["name"].split("%20");
+    document.getElementById("name").innerText = name[0] + " " + name[1];
+    document.getElementById("zip").innerText = objs["zip"];
+    document.getElementById("distance").innerText = objs["distance"] + " miles";
+    document.getElementById("subjects").innerText = objs["subjects"];
+
 
 });
