@@ -17,19 +17,24 @@ function getQueryString() {
         checkedSubjects = "none";
     checkedSubjects = checkedSubjects.substr(0, checkedSubjects.length - 1);
     
-    email.replace(".", "%2E");
-    email.replace("@", "%40");
+    name.replace(" ", "+");
+    email.replace('\.', "%2E");
+    email.replace('\@', "%40");
 
-    var queryString = "?name=" + name + "?email=" + email + "&zip=" + zip + "&subjects=" + checkedSubjects + "&distance=" + distance;
+    var queryString = "?name=" + name + "&zip=" + zip + "&subjects=" + checkedSubjects + "&distance=" + distance;
     console.log("isn't this so secure");
     return queryString;
+}
+
+function validate(){
+    // todo: validate fields, display alert if fields not all filled out
 }
 
 window.addEventListener("load",function() {
     document.getElementById('signup').addEventListener("submit",function(e) {
         $(function () { 
             queryString = getQueryString();
-            window.location.href="tutors.html" + queryString;
+            window.location.href="tutorfinder.html" + queryString;
         }); 
     });
   });

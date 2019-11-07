@@ -1,11 +1,89 @@
 body {
-	position: relative;
+	/* position: relative; */
     margin: 0;
-    padding: 10vw;
-	width: 100vw;
-	overflow-x: hidden;
+    /* padding: 10vw; */
+	width: 100%;
+    /* overflow-x: hidden; */
+    font-family: "Montserrat", sans-serif;
+}
+
+#signup-form {
+    margin: 0 auto;
+    width: 500px;
 }
 
 #title {
-    margin-bottom: 5vw;
+    text-align: center;
+}
+
+#signup {
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* max-width: 500px; */
+    
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid grey;
+    font-size: 90%;
+}
+
+.form-group label {
+    display: block;
+    margin: 0 0 5px 0;
+}
+
+.form-check label {
+    display: inline-block;
+}
+
+.custom-select {
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+    border:none;
+    /* border-bottom: 1px solid grey; */
+}
+
+option {
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+    border:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    background-color: #2093cd;
+    color: #ffffff;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #64beeb;
+    transition: 0.2s ease-in-out;
 }
