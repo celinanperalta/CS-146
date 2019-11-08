@@ -1,87 +1,89 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title></title>
-		<meta name="description" content="" />
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="src/styles/signup.css" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap"
-			rel="stylesheet"/>
-    </head>
-    <body>
-        <h1 id="title">Find a Tutor</h1>
-        <form id="signup" method="POST">
-            <div class="form-group">
-                        <label for="email">Name</label>
-                        <input type="text" class="form-control" id="name-entry" placeholder="Name" required>
-                </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control" id="email-entry" placeholder="Enter email" required>
-            </div>
-            <div class="form-group">
-                    <label for="zipcode">Zip Code</label>
-                    <input type="text" class="form-control" id="zipcode-entry" placeholder="Zip" required>
-            </div>
-            <div class="form-group">
-                <label for="subjects">Subjects</label>
-                <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck1" value="English">
-                        <label class="form-check-label" for="gridCheck1">
-                          English
-                        </label>
-                </div>
-                <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck2" value="Math">
-                        <label class="form-check-label" for="gridCheck2">
-                          Math
-                        </label>
-                </div>
-                <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck3" value="Biology">
-                        <label class="form-check-label" for="gridCheck3">
-                          Biology
-                        </label>
-                </div>
-                <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck4" value="Chemistry">
-                        <label class="form-check-label" for="gridCheck4">
-                          Chemistry
-                        </label>
-                </div>
-                <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck5" value="Physics">
-                        <label class="form-check-label" for="gridCheck5">
-                          Physics
-                        </label>
-                </div>
-                <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck5" value="History">
-                        <label class="form-check-label" for="gridCheck5">
-                          History
-                        </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="distance">Distance</label>
-                <select class="custom-select mr-sm-2" id="distance" required>
-                        <option selected>Choose...</option>
-                        <option value="2">2 miles</option>
-                        <option value="5">5 miles</option>
-                        <option value="10">10 miles</option>
-                        <option value="20">20 miles</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="src/styles/signup.css" />
+        <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+        <div id="signup-form">
+                <form id="signup" method="POST">
+                        <h1 id="title">Find a Tutor</h1>
+                        <div class="form-group">
+                                <label for="email">Name:</label>
+                                <input type="text" class="form-control" id="name-entry" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" class="form-control" id="email-entry" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="zipcode">Zip Code:</label>
+                                <input type="text" class="form-control" id="zipcode-entry" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="subjects">Subjects I'm Interested In:</label>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1" value="English">
+                                        <label class="form-check-label" for="gridCheck1">
+                                                English
+                                        </label>
+                                </div>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" value="Math">
+                                        <label class="form-check-label" for="gridCheck2">
+                                                Math
+                                        </label>
+                                </div>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck3" value="Biology">
+                                        <label class="form-check-label" for="gridCheck3">
+                                                Biology
+                                        </label>
+                                </div>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck4"
+                                                value="Chemistry">
+                                        <label class="form-check-label" for="gridCheck4">
+                                                Chemistry
+                                        </label>
+                                </div>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck5" value="Physics">
+                                        <label class="form-check-label" for="gridCheck5">
+                                                Physics
+                                        </label>
+                                </div>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck5" value="History">
+                                        <label class="form-check-label" for="gridCheck5">History</label>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="distance">Distance</label>
+                                <select class="custom-select mr-sm-2" id="distance" required>
+                                        <option selected>Choose...</option>
+                                        <option value="2">2 miles</option>
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="20">20 miles</option>
+                                </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
         <script src="src/scripts/signup.js"></script>
-    </body>
+</body>
+
 </html>
