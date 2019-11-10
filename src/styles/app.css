@@ -1,197 +1,174 @@
 body {
-    position: relative;
-    margin: 0;
-    width: 100vw;
-    overflow-x: hidden;
+	position: relative;
+	margin: 0;
+	width: 100vw;
+	overflow-x: hidden;
 }
 
 .nav {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
-	position: absolute;
-	display: flex;
-	justify-content: space-between;
-	z-index: 50;
-	top: 0;
-	width: 100vw;
-	height: 100px;
-	box-shadow: 0 0 10px #111111;
-	background-color: #ffffff;
-	padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 50;
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    box-shadow: 0 0 10px #111111;
+    background-color: #ffffff;
+    padding: 0rem 2rem;
 }
 
 .nav__logo {
-	color: #115482;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	height: 100%;
+    color: #115482;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .nav__logo img {
-	width: 150px;
-	margin-right: 2rem;
+    width: 150px;
+    margin-right: 2rem;
 }
 
 .nav__navigation {
-	margin: auto;
-	left: calc(50% - 172px);
-	position: absolute;
-	text-transform: uppercase;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100px;
-	list-style: none;
+    margin: auto;
+    left: calc(50% - 172px);
+    position: absolute;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    list-style: none;
 }
 
 .nav__navigation span {
-	margin: 0rem 1rem;
-	color: #2093cd;
+    margin: 0rem 1rem;
+    color: #2093cd;
 }
 
 .nav__navigation a {
-	transition: 0.2s ease-in-out;
-	border-bottom: 2px solid transparent;
-	text-decoration: none;
-	color: black;
+    transition: 0.2s ease-in-out;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    color: black;
 }
 
 .nav__navigation a:hover {
-	color: #2093cd;
-	border-color: #2093cd;
+    color: #2093cd;
+    border-color: #2093cd;
 }
 
 .nav__login {
-	display: flex;
-	height: 100%;
-	align-items: center;
-	margin-right: 3.25rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: 3.25rem;
 }
 
 .nav__login--info {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-weight: normal;
-	font-size: 1.5rem;
-	line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 .nav__login img {
-	height: 70px;
-	border-radius: 50%;
-	margin-left: 1.5rem;
-	box-shadow: 2px 2px 10px #111111;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 1.5rem;
+    box-shadow: 2px 2px 10px #111111;
 }
 
 .nav__login--info-type {
-	margin-top: -1.25rem;
-	font-weight: bold;
-	font-size: 0.75rem;
-	text-transform: uppercase;
-	color: #2093cd;
+    margin-top: -1.25rem;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #2093cd;
 }
 
 .hero {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    z-index: 20;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: relative;
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .hero img {
-    position: absolute;
-    z-index: 10;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+	position: absolute;
+	z-index: 10;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 .hero__content {
-    position: relative;
-    z-index: 20;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    font-family: 'Anton', sans-serif;
-    color: #ffffff;
-    line-height: 1.2;
-    text-transform: uppercase;
-    font-size: 7rem;
-    margin-left: 6rem;
+	position: relative;
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	font-family: 'Anton', sans-serif;
+	color: #ffffff;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-size: 7rem;
+	margin-left: 6rem;
 }
 
 .hero__content p {
-    margin: 0;
+	margin: 0;
+}
+
+.hero__content a {
+	margin-left: 2rem;
 }
 
 .sites-button {
-    background-color: #2093cd;
-    border: none;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.25rem;
-    padding: 1.5rem 4rem;
-    position: relative;
-    transition: 0.2s ease-in-out;
-    z-index: 20;
+	background-color: #2093cd;
+	border: none;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.25rem;
+	padding: 1.5rem 4rem;
+	position: relative;
+	transition: 0.2s ease-in-out;
+	z-index: 20;
 }
 
 .sites-button:hover {
-    background-color: #0c445f;
+	background-color: #0c445f;
 }
 
 .sites-button:hover:before {
-    border-color: #0c445f;
+	border-color: #0c445f;
 }
 
 .sites-button:before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border: 2px solid #2093cd;
-    top: -1rem;
-    z-index: 19;
-    transition: 0.2s ease-in-out;
-    left: -1rem;
-}
-
-@media only screen and (min-width: 999px) {
-    .hero__content {
-        font-size: 5.75rem;
-        margin-left: 5.75rem;
-    }
-}
-
-@media only screen and (max-width: 998px) and (min-width: 400px) {
-    .hero__content {
-        font-size: 4rem;
-        margin-left: 4rem;
-    }
-}
-
-@media only screen and (max-width: 399px) {
-    .hero__content {
-        font-size: 3rem;
-        margin-left: 2rem;
-    }
-    .hero__content a {
-        margin-top: 1rem;
-    }
-    .sites-button {
-        font-size: 0.75rem;
-    }
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border: 2px solid #2093cd;
+	top: -1rem;
+	z-index: 19;
+	transition: 0.2s ease-in-out;
+	left: -1rem;
 }
