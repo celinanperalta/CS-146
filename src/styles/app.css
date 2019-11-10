@@ -1,7 +1,14 @@
+/* 
+ * =======================================
+ *                  Global
+ * =======================================
+ */
+
 body {
   position: relative;
   margin: 0;
-  width: 100vw;
+  width: 100vw !important;
+  max-width: 100vw;
   overflow-x: hidden;
 }
 
@@ -14,7 +21,50 @@ a {
   text-decoration: none;
 }
 
+.sites-button {
+  background-color: #2093cd;
+  border: none;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5rem 8rem;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  z-index: 20;
+  text-decoration: none;
+}
+
+.sites-button:hover {
+  background-color: #0c445f;
+}
+
+.sites-button:hover:before {
+  border-color: #0c445f;
+}
+
+.sites-button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #2093cd;
+  top: -1rem;
+  z-index: 19;
+  transition: 0.2s ease-in-out;
+  left: -1rem;
+}
+
+/* 
+ * =======================================
+ *                Navbar
+ * =======================================
+ */
+
 .nav {
+  overflow: hidden;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   position: absolute;
@@ -105,6 +155,12 @@ a {
   color: #2093cd;
 }
 
+/* 
+ * =======================================
+ *               Front Hero
+ * =======================================
+ */
+
 .hero {
   height: 100vh;
   width: 100vw;
@@ -148,48 +204,41 @@ a {
   margin-left: 2rem;
 }
 
-.sites-button {
-  background-color: #2093cd;
-  border: none;
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.25rem;
-  padding: 1.5rem 8rem;
-  position: relative;
-  transition: 0.2s ease-in-out;
-  z-index: 20;
-  text-decoration: none;
+@media (max-width: 1024px) {
+  .hero__content {
+    margin-left: 2rem;
+  }
 }
 
-.sites-button:hover {
-  background-color: #0c445f;
+@media (max-width: 860px) {
+  .hero__content {
+    font-size: 5rem;
+  }
 }
 
-.sites-button:hover:before {
-  border-color: #0c445f;
+@media (max-width: 560px) {
+  .hero__content {
+    font-size: 3.5rem;
+  }
+
+  .hero__content a {
+    padding: 1rem 4rem;
+  }
 }
 
-.sites-button:before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border: 2px solid #2093cd;
-  top: -1rem;
-  z-index: 19;
-  transition: 0.2s ease-in-out;
-  left: -1rem;
-}
+/* 
+ * =======================================
+ *                  Info Section
+ * =======================================
+ */
 
 .info {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   display: flex;
-  width: 100%;
+  width: 100vw;
   min-height: 500px;
+  overflow: hidden;
 }
 
 .info__left {
@@ -286,6 +335,56 @@ a {
   color: #0066ff;
 }
 
+@media (max-width: 1550px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .info__left,
+  .info__right {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .info__left {
+    align-items: center;
+  }
+
+  .info__right-content {
+    position: relative;
+    right: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .info__right-content {
+    flex-direction: column;
+  }
+
+  .info__right-content-single {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .info__right-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .info__left {
+    font-size: 1.8rem;
+  }
+
+  .info__left p:nth-child(2):before {
+    width: 80px;
+  }
+
+  .info__right {
+    padding: 0;
+  }
+}
+
 /* 
  * =======================================
  *                  Tutors
@@ -299,6 +398,7 @@ a {
   justify-content: space-between;
   margin: 0rem -15rem;
   padding: 4rem 0rem;
+  overflow-x: hidden;
 }
 
 .tutors__single {
@@ -350,7 +450,17 @@ a {
 
 @media (max-width: 860px) {
   .tutors {
-    margin: 0 -30rem;
+    width: 100vw;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .tutors__single {
+    display: none;
+  }
+
+  .tutors__single:nth-child(2) {
+    display: flex;
   }
 }
 
@@ -370,6 +480,7 @@ a {
   padding: 4rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  overflow: hidden;
 }
 
 .footer__title {
@@ -438,6 +549,35 @@ a {
   position: absolute;
   color: white;
   bottom: 0.1rem;
-  width: 100%;
+  width: 100vw;
   text-align: center;
+}
+
+@media (max-width: 680px) {
+  .footer__form-row {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+
+  .footer__form-row button {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer {
+    padding: 4rem 1rem;
+  }
+
+  .footer__copy {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__title {
+    font-size: 2.3rem;
+  }
 }
