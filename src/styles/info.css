@@ -7,7 +7,7 @@ body {
 .nav {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    position: relative;
+    position: sticky;
     display: flex;
     justify-content: space-between;
     z-index: 50;
@@ -134,7 +134,7 @@ body {
 
 .intro h2 {
     display: inherit;
-    color: #125380;
+    color: #2093cd;
     text-shadow: 2px 1px 6px #111111;
     font-size: 6rem;
     margin: 0;
@@ -274,7 +274,7 @@ body {
 }
 
 .qualified_text button {
-    background-color: #0c445f;
+    background-color: #2093cd;
     border: none;
     color: white;
     font-family: 'Montserrat', sans-serif;

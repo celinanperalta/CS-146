@@ -14,32 +14,51 @@
 </head>
 
 <body>
-                <nav class="nav">
-                                <a href="index.html" class="nav__logo">
-                                        <img src="src/images/tutor-finder-logo.png" alt="Tutor Finder Logo" />
-                                        <p>tutor finder</p>
-                                </a>
-                                <ul class="nav__navigation">
-                                        <li>
-                                                <a href="pages/students.html">students</a>
-                                        </li>
-                                        <span>|</span>
-                                        <li>
-                                                <a href="pages/tutors.html">tutors</a>
-                                        </li>
-                                        <span>|</span>
-                                        <li>
-                                                <a href="pages/contact.html">contact</a>
-                                        </li>
-                                </ul>
-                                <div class="nav__login">
-                                        <div class="nav__login--info">
-                                                <p>Hailey</p>
-                                                <p class="nav__login--info-type">student</p>
-                                        </div>
-                                        <img src="src/images/profile-picture.jpg" alt="Profile picture" />
-                                </div>
-                        </nav>
+        <nav class="nav">
+                <a href="index.html" class="nav__logo">
+                        <img src="src/images/tutor-finder-logo.png" alt="Tutor Finder Logo" />
+                        <p>tutor finder</p>
+                </a>
+                <div id="nav_links">
+                        <ul class="nav__navigation">
+                                <li>
+                                        <a href="pages/students.html">students</a>
+                                </li>
+                                <!-- <span>|</span> -->
+                                <li>
+                                        <a href="pages/tutors.html">tutors</a>
+                                </li>
+                                <!-- <span>|</span> -->
+                                <li>
+                                        <a href="pages/contact.html">contact</a>
+                                </li>
+                        </ul>
+
+                </div>
+                <div class="nav__login">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                        <div class="nav__login--info">
+                                <p>Hailey</p>
+                                <p class="nav__login--info-type">student</p>
+                        </div>
+                        <img src="src/images/profile-picture.jpg" alt="Profile picture" />
+                </div>
+        </nav>
+        <nav class="res__nav">
+                <ul>
+                        <li>
+                                <a href="pages/students.html">students</a>
+                        </li>
+                        <!-- <span>|</span> -->
+                        <li>
+                                <a href="pages/tutors.html">tutors</a>
+                        </li>
+                        <!-- <span>|</span> -->
+                        <li>
+                                <a href="pages/contact.html">contact</a>
+                        </li>
+                </ul>
+        </nav>
         <div class="signup-form">
                 <form id="signup" method="POST">
                         <h1 id="title">Find a Tutor</h1>

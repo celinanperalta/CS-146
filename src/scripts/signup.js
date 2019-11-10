@@ -34,7 +34,7 @@ window.addEventListener("load",function() {
     document.getElementById('signup').addEventListener("submit",function(e) {
         $(function () { 
             queryString = getQueryString();
-            window.location.href="tutorfinder.html" + queryString;
+            window.location.href="../pages/tutors.html" + queryString;
         }); 
     });
   });
