@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .nav {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -6,12 +12,10 @@
     justify-content: space-between;
     z-index: 50;
     top: 0;
-    margin-left: 0%;
     width: 100%;
     height: 100px;
     box-shadow: 0 0 10px #111111;
     background-color: #ffffff;
-    padding: 0rem 2rem;
 }
 
 .nav__logo {
@@ -22,6 +26,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    padding-left: 1rem;
 }
 
 .nav__logo img {
@@ -62,7 +67,7 @@
     display: flex;
     height: 100%;
     align-items: center;
-    margin-right: 3.25rem;
+    padding-right: 1rem;
 }
 
 .nav__login--info {
@@ -91,22 +96,249 @@
 }
 
 .hero {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+    width: 100%;
+    height: 90vh;
     display: flex;
-    justify-content: left;
-    border: 2px solid black;
-}
-
-.hero div {
-    width: 50vw;
-    overflow: auto;
     flex-wrap: wrap;
     direction: row;
-    align-items: center;
+    border-bottom: 3px solid #111111;
+    box-shadow: 5px 3px 5px #115482;
+    justify-content: center;
 }
 
-.hero img {
+.intro {
+    flex: 70%;
+    height: 100%;
+    flex-direction: column;
+    flex-grow: inherit;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    display: flex;
+}
+
+.iPhone_image {
+    flex: 30%;
+    flex-direction: column;
+    flex-grow: inherit;
+    text-align: left;
+    display: flex;
+}
+
+.iPhone {
+    width: 40vh;
+    height: auto;
+    display: inherit;
+    margin: auto 0px;
+}
+
+.intro h2 {
+    display: inherit;
+    color: #125380;
+    text-shadow: 2px 1px 6px #111111;
+    font-size: 6rem;
+    margin: 0;
+    padding: 0px 2rem;
+    margin: auto;
+}
+
+.intro p {
+    padding-top: 2rem;
+    font-size: 2.5rem;
+}
+
+.summary {
     width: 100%;
+    height: 100vh;
+}
+
+.accompany_image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10;
+    position: absolute;
+}
+
+.accompany_image img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+.summary_text {
+    z-index: 10;
+    width: 75%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.summary_text p {
+    color: white;
+    font-size: 2.9rem;
+    text-shadow: 3px 3px 6px #000000;
+}
+
+.finals {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    direction: row;
+    justify-content: center;
+    background-color: #E8E8E8;
+}
+
+.night {
+    flex: 70%;
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+    flex-grow: inherit;
+    height: 100%;
+    border: 10px solid black;
+    box-sizing: border-box;
+}
+
+.night img {
+    object-fit: cover;
+    object-position: right;
+}
+
+.finals_info {
+    flex: 30%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-grow: inherit;
+}
+
+.finals_info h2 {
+    text-align: center;
+    color: white;
+    font-size: 8vh;
+    padding: 4px;
+}
+
+.finals_info p {
+    text-align: center;
+    color: white;
+    font-size: 1.5vw;
+    padding: 2px;
+}
+
+.content {
+    position: absolute;
+    margin: auto;
+}
+
+.qualified_tutors {
+    width: 100%;
+    height: 70vh;
+}
+
+.qtImage {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    z-index: -10;
+    position: absolute;
+}
+
+.qtImage img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+.qualified_text {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    width: 50vw;
+    height: 10vh;
+}
+
+.qualified_text h2 {
+    color: white;
+    text-shadow: 3px 3px 6px #000000;
+    font-size: 8vh;
+}
+
+.qualified_text button {
+    background-color: #0c445f;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1.5rem 4rem;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    z-index: 20;
+    box-shadow: 0px 5px 15px black;
+}
+
+.qualified_text button:hover {
+    background-color: black;
+    box-shadow: 0px 5px 150px black;
+}
+
+@media only screen and (max-width: 998px) and (min-width: 400px) {
+    .hero {
+        height: auto;
+    }
+    .intro {
+        padding-top: 1rem;
+    }
+    .intro h2 {
+        font-size: 5rem;
+    }
+    .iPhone {
+        margin: 5rem auto;
+    }
+    .summary_text p {
+        font-size: 7vh;
+    }
+    .night {
+        flex: 40%;
+    }
+    .finals_info {
+        flex: 60%;
+    }
+    .finals_info h2 {
+        font-size: 2rem;
+    }
+    .finals_info p {
+        font-size: 4vh;
+    }
+    .qualified_text {
+        width: 20rem;
+    }
+    .qualified_text h2 {
+        font-size: 2.5rem;
+    }
+    .qualified_text button {
+        background-color: #0c445f;
+        border: none;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 1.5rem 4rem;
+        position: relative;
+        transition: 0.2s ease-in-out;
+        z-index: 20;
+        box-shadow: 0px 5px 15px black;
+    }
 }
