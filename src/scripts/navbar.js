@@ -1,3 +1,5 @@
+// Adds accordion functionality to the navbar
+// for mobile users
 window.onload = () => {
   const accordionButton = document.querySelector("#menu_btn");
 
