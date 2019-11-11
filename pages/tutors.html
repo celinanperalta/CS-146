@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title></title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../src/styles/tutors.css" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<section class="nav">
-			<div class="nav__logo"></div>
-			<nav class="nav__navigation"></nav>
-			<div class="nav__login"></div>
-		</section>
-		<section class="hero">
-			<img alt="man in coffee shop on laptop" src="../src/images/front-hero.jpg" />
-			<div class="hero__content__center">
-				<p>Find a tutor</p>
-			</div>
-			<a href="#availabletutors"> <img class="hero" id="hero__scroll__down" alt="scroll down" src="src/images/scroll-down.png"/> </a>
-
-		</section>
-		<section class="hero" id="availabletutors">
-			<img alt="map" src="src/images/map.jpg" />
-			<div class="columns">
-				<ul class="profile">
-				<img class="hero" alt="amanda" id="profile__img" src="../src/images/profile-picture.jpg"/>
-				<li class="header">Amanda</li>
-				<li class="grey"> $20 / hr</li>
-				<li class="grey"> Specializes in: Differential calculus </li>
-			</ul>
-			</div>
-			<div class="columns">
-				<ul class="profile">
-				<img class="hero" alt="brett" id="profile__img" src="../src/images/profile-picture2.jpg"/>
-				<li class="header">Brett</li>
-				<li class="grey"> $15 / hr</li>
-				<li class="grey"> Specializes in: Humanities and Language Arts</li>
-			</ul>
-			</div>
-			<div class="columns">
-				<ul class="profile">
-				<img class="hero" alt="amanda" id="profile__img" src="../src/images/profile-picture3.jpg"/>
-				<li class="header">Kanye</li>
-				<li class="grey"> $10 / half hr</li>
-				<li class="grey"> Specializes in: Computer Science</li>
-			</ul>
-			</div>
-		</section>
-		<script src="../src/scripts/app.js" async defer></script>
-	</body>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title></title>
+      <meta name="description" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="../src/styles/tutors.css" />
+      <link
+         href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap"
+         rel="stylesheet"
+         />
+   </head>
+   <body>
+      <section class="nav">
+         <body>
+            <nav class="nav">
+               <a href="index.html" class="nav__logo">
+                  <img src="../src/images/tutor-finder-logo.png" alt="Tutor Finder Logo" />
+                  <p>tutor finder</p>
+               </a>
+               <ul class="nav__navigation">
+                  <li>
+                     <a href="../pages/students.html">students</a>
+                  </li>
+                  <span>|</span>
+                  <li>
+                     <a href="../pages/tutors.html">tutors</a>
+                  </li>
+                  <span>|</span>
+                  <li>
+                     <a href="../pages/contact.html">contact</a>
+                  </li>
+               </ul>
+               <div class="nav__login">
+                  <div class="nav__login--info">
+                     <p>Hailey</p>
+                     <p class="nav__login--info-type">student</p>
+                  </div>
+                  <img src="../src/images/profile-picture.jpg" alt="Profile picture" />
+               </div>
+            </nav>
+      </section>
+      <section class="hero" id="availabletutors">
+      <img alt="map" src="../src/images/map.jpg" />
+      <div class="columns">
+      <ul class="profile">
+      <img class="hero" alt="amanda" id="profile__img" src="../src/images/profile-picture.jpg"/>
+      <li class="header">Amanda</li>
+      <li class="grey"> $20 / hr</li>
+      <li class="grey"> Specializes in: Differential calculus </li>
+      </ul>
+      </div>
+      <div class="columns">
+      <ul class="profile">
+      <img class="hero" alt="brett" id="profile__img" src="../src/images/profile-picture2.jpg"/>
+      <li class="header">Brett</li>
+      <li class="grey"> $15 / hr</li>
+      <li class="grey"> Specializes in: Language Arts</li>
+      </ul>
+      </div>
+      <div class="columns">
+      <ul class="profile">
+      <img class="hero" alt="amanda" id="profile__img" src="../src/images/profile-picture3.jpg"/>
+      <li class="header">Kanye</li>
+      <li class="grey"> $10 / half hr</li>
+      <li class="grey"> Specializes in: Computer Science</li>
+      </ul>
+      </div>
+      </section>
+      <script src="../src/scripts/app.js" async defer></script>
+   </body>
 </html>
