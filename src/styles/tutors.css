@@ -98,7 +98,7 @@ body {
   color: white;
 }
 
-.profile li {
+.profile div {
   border-bottom: 1px solid #eee;
   padding: 20px;
   text-align: center;
