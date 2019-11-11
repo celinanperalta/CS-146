@@ -56,7 +56,11 @@
       <div class="signup__overlay"></div>
       <img alt="Glasses on top of noteobok" src="src/images/forms-bg.jpg" />
       <h2 class="signup__title">find a <span>tutor.</span></h2>
-      <form action="#" method="post" class="signup__form">
+      <form
+        id="student__signup"
+        method="POST"
+        class="student__signup signup__form"
+      >
         <div class="signup__form-row">
           <input type="text" name="Name" id="sf-name" required />
           <label class="signup__form-row-label">
@@ -79,16 +83,47 @@
           <label class="signup__form-row-label">
             Topics That Interest You </label
           ><br />
-          <input type="radio" name="english" value="english" /> English <br />
-          <input type="radio" name="math" value="math" /> Math <br />
-          <input type="radio" name="biology" value="biology" /> Biology <br />
-          <input type="radio" name="chemistry" value="chemistry" /> Chemistry
+          <input
+            class="check-input"
+            type="checkbox"
+            name="english"
+            value="english"
+          />
+          English <br />
+          <input class="check-input" type="checkbox" name="math" value="math" />
+          Math <br />
+          <input
+            class="check-input"
+            type="checkbox"
+            name="biology"
+            value="biology"
+          />
+          Biology <br />
+          <input
+            class="check-input"
+            type="checkbox"
+            name="chemistry"
+            value="chemistry"
+          />
+          Chemistry
           <br />
-          <input type="radio" name="physics" value="physics" /> Physics <br />
-          <input type="radio" name="history" value="history" /> History <br />
+          <input
+            class="check-input"
+            type="checkbox"
+            name="physics"
+            value="physics"
+          />
+          Physics <br />
+          <input
+            class="check-input"
+            type="checkbox"
+            name="history"
+            value="history"
+          />
+          History <br />
         </div>
         <div class="signup__form-row">
-          <select required>
+          <select id="distance" required>
             <option value="">Choose...</option>
             <option value="5">5 miles</option>
             <option value="10">10 miles</option>
@@ -101,12 +136,17 @@
           </label>
         </div>
         <div class="signup__form-row lg submit">
-          <button class="signup__form-row-button sites-button red">
+          <button
+            type="submit"
+            class="signup__form-row-button sites-button red"
+          >
             find tutors
           </button>
         </div>
       </form>
     </section>
     <script src="src/scripts/navbar.js" async defer></script>
+    <script src="src/scripts/student_signup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </body>
 </html>
