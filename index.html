@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>TutorFinder</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="src/styles/app.css" />
@@ -23,11 +23,11 @@
         <li>
           <a href="pages/students.html">students</a>
         </li>
-        <span>|</span>
+        <li class="nav__navigation-sep">|</li>
         <li>
           <a href="pages/tutors.html">tutors</a>
         </li>
-        <span>|</span>
+        <li class="nav__navigation-sep">|</li>
         <li>
           <a href="pages/contact.html">contact</a>
         </li>
@@ -41,9 +41,9 @@
       </div>
       <button class="mobile-menu__open" id="menu_btn">
         menu
-        <div class="mobile-menu-line"></div>
-        <div class="mobile-menu-line"></div>
-        <div class="mobile-menu-line"></div>
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
       </button>
       <nav class="mobile-menu__menu">
         <a href="pages/students.html">students</a>
@@ -94,31 +94,43 @@
     </section>
     <section class="tutors">
       <a href="#" class="tutors__single">
-				<img class="tutors__single-image" src="src/images/daniel-wang.jpg" alt="Tutor's Profile Picture"></img>
-				<p class="tutors__single-name">Daniel W.</p>
-				<p class="tutors__single-education">Harvard University</p>
-				<p class="tutors__single-concentration">Calculus & Physics</p>
-				<p class="tutors__single-hire">Hire Daniel</p>
-			</a>
+        <img
+          class="tutors__single-image"
+          src="src/images/daniel-wang.jpg"
+          alt="Tutor's Profile Picture"
+        />
+        <p class="tutors__single-name">Daniel W.</p>
+        <p class="tutors__single-education">Harvard University</p>
+        <p class="tutors__single-concentration">Calculus & Physics</p>
+        <p class="tutors__single-hire">Hire Daniel</p>
+      </a>
       <a href="#" class="tutors__single">
-				<img class="tutors__single-image" src="src/images/daniel-wang.jpg" alt="Tutor's Profile Picture"></img>
-				<p class="tutors__single-name">Daniel W.</p>
-				<p class="tutors__single-education">Harvard University</p>
-				<p class="tutors__single-concentration">Calculus & Physics</p>
-				<p class="tutors__single-hire">Hire Daniel</p>
-			</a>
+        <img
+          class="tutors__single-image"
+          src="src/images/daniel-wang.jpg"
+          alt="Tutor's Profile Picture"
+        />
+        <p class="tutors__single-name">Daniel W.</p>
+        <p class="tutors__single-education">Harvard University</p>
+        <p class="tutors__single-concentration">Calculus & Physics</p>
+        <p class="tutors__single-hire">Hire Daniel</p>
+      </a>
       <a href="#" class="tutors__single">
-				<img class="tutors__single-image" src="src/images/daniel-wang.jpg" alt="Tutor's Profile Picture"></img>
-				<p class="tutors__single-name">Daniel W.</p>
-				<p class="tutors__single-education">Harvard University</p>
-				<p class="tutors__single-concentration">Calculus & Physics</p>
-				<p class="tutors__single-hire">Hire Daniel</p>
-			</a>
+        <img
+          class="tutors__single-image"
+          src="src/images/daniel-wang.jpg"
+          alt="Tutor's Profile Picture"
+        />
+        <p class="tutors__single-name">Daniel W.</p>
+        <p class="tutors__single-education">Harvard University</p>
+        <p class="tutors__single-concentration">Calculus & Physics</p>
+        <p class="tutors__single-hire">Hire Daniel</p>
+      </a>
     </section>
     <footer class="footer">
       <p class="footer__title">got a <span>question?</span></p>
       <p class="footer__title"><span>get in</span> touch.</p>
-      <form action="" method="post" class="footer__form">
+      <form action="#" method="post" class="footer__form">
         <div class="footer__form-row">
           <input type="text" name="Name" id="sf-name" required />
           <label class="footer__form-row-label">
@@ -138,7 +150,7 @@
           </label>
         </div>
         <div class="footer__form-row lg">
-          <textarea type="text" name="Message" id="sf-desc" required></textarea>
+          <textarea name="Message" id="sf-desc" required></textarea>
           <label class="footer__form-row-label">
             Message *
           </label>

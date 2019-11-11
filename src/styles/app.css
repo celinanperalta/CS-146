@@ -105,11 +105,11 @@ a {
   justify-content: center;
   height: 100px;
   list-style: none;
+  color: #2093cd;
 }
 
-.nav__navigation span {
+.nav__navigation-sep {
   margin: 0rem 1rem;
-  color: #2093cd;
 }
 
 .nav__navigation a {
