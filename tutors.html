@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="src/styles/inner.css" />
-    <link rel="stylesheet" href="src/styles/nav.css" />
+    <link rel="stylesheet" href="src/styles/navbar.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap"
       rel="stylesheet"
@@ -30,7 +30,7 @@
         </li>
         <li class="nav__navigation-sep">|</li>
         <li>
-          <a href="contact.html">contact</a>
+          <a href="about.html">about</a>
         </li>
       </ul>
       <div class="nav__login">
@@ -49,7 +49,7 @@
       <nav class="mobile-menu__menu">
         <a href="students.html">students</a>
         <a href="tutors.html">tutors</a>
-        <a href="contact.html">contact</a>
+        <a href="about.html">about</a>
       </nav>
     </nav>
     <section class="signup">
@@ -59,7 +59,7 @@
         src="src/images/tutors-bg.jpg"
       />
       <h2 class="signup__title">find <span>students.</span></h2>
-      <form action="#" method="post" class="signup__form">
+      <form id="tutor__signup" method="POST" class="signup__form">
         <div class="signup__form-row">
           <input type="text" name="Name" id="sf-name" required />
           <label class="signup__form-row-label">
@@ -79,7 +79,7 @@
           </label>
         </div>
         <div class="signup__form-row md">
-          <select required>
+          <select id="distance" required>
             <option value="">Choose...</option>
             <option value="5">5 miles</option>
             <option value="10">10 miles</option>
@@ -99,21 +99,23 @@
         </div>
         <div class="signup__form-row lg radio">
           <label class="signup__form-row-label"> Your Topics </label><br />
-          <input type="radio" name="english" value="english" /> English <br />
-          <input type="radio" name="math" value="math" /> Math <br />
-          <input type="radio" name="biology" value="biology" /> Biology <br />
-          <input type="radio" name="chemistry" value="chemistry" /> Chemistry
+          <input class="check-input" type="checkbox" name="english" value="english" /> English <br />
+          <input class="check-input" type="checkbox" name="math" value="math" /> Math <br />
+          <input class="check-input" type="checkbox" name="biology" value="biology" /> Biology <br />
+          <input class="check-input" type="checkbox" name="chemistry" value="chemistry" /> Chemistry
           <br />
-          <input type="radio" name="physics" value="physics" /> Physics <br />
-          <input type="radio" name="history" value="history" /> History <br />
+          <input class="check-input" type="checkbox" name="physics" value="physics" /> Physics <br />
+          <input class="check-input" type="checkbox" name="history" value="history" /> History <br />
         </div>
         <div class="signup__form-row lg submit">
-          <button class="signup__form-row-button sites-button red">
+          <button type="submit" class="signup__form-row-button sites-button red">
             find students
           </button>
         </div>
       </form>
     </section>
     <script src="src/scripts/navbar.js" async defer></script>
+    <script src="src/scripts/tutor_signup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </body>
 </html>

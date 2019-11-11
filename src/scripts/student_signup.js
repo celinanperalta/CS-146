@@ -1,9 +1,9 @@
 
-function getQueryString() {
-    var name = document.getElementById("name-entry").value;
-    var email = document.getElementById("email-entry").value;
-    var zip = document.getElementById("zipcode-entry").value;
-    var subjects = document.getElementsByClassName("form-check-input");
+function getStudentQueryString() {
+    var name = document.getElementById("sf-name").value;
+    var email = document.getElementById("sf-email").value;
+    var zip = document.getElementById("sf-zip").value;
+    var subjects = document.getElementsByClassName("check-input");
     var checkedSubjects = "";
     var distance = document.getElementById("distance").value;
 
@@ -26,15 +26,11 @@ function getQueryString() {
     return queryString;
 }
 
-function validate(){
-    // todo: validate fields, display alert if fields not all filled out
-}
-
 window.addEventListener("load",function() {
-    document.getElementById('signup').addEventListener("submit",function(e) {
+    document.getElementById("student__signup").addEventListener("submit",function(e) {
         $(function () { 
-            queryString = getQueryString();
-            window.location.href="../pages/tutors.html" + queryString;
+            queryString = getStudentQueryString();
+            window.location.href="view-tutors.html" + queryString;
         }); 
     });
   });

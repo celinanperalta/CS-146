@@ -8,48 +8,48 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="src/styles/about.css" />
+    <link rel="stylesheet" href="src/styles/navbar.css" />
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet" />
 </head>
 
 <body>
     <nav class="nav">
         <a href="index.html" class="nav__logo">
-            <img src="src/images/tutor-finder-logo.png" alt="Tutor Finder Logo" />
-            <p>tutor finder</p>
+          <img src="src/images/tutor-finder-logo.png" alt="Tutor Finder Logo" />
+          <p>tutor finder</p>
         </a>
         <ul class="nav__navigation">
-            <li>
-                <a href="pages/students.html">students</a>
-            </li>
-            <span>|</span>
-            <li>
-                <a href="pages/tutors.html">tutors</a>
-            </li>
-            <span>|</span>
-            <li>
-                <a href="about.html">about</a>
-            </li>
+          <li>
+            <a href="students.html">students</a>
+          </li>
+          <li class="nav__navigation-sep">|</li>
+          <li>
+            <a href="tutors.html">tutors</a>
+          </li>
+          <li class="nav__navigation-sep">|</li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
         </ul>
         <div class="nav__login">
-            <div class="nav__login--info">
-                <p>Hailey</p>
-                <p class="nav__login--info-type">student</p>
-            </div>
-            <img src="src/images/profile-picture.jpg" alt="Profile picture" />
+          <div class="nav__login--info">
+            <p>Hailey</p>
+            <p class="nav__login--info-type">student</p>
+          </div>
+          <img src="src/images/profile-picture.jpg" alt="Profile Picture" />
         </div>
         <button class="mobile-menu__open" id="menu_btn">
           menu
-          <div class="mobile-menu-line"></div>
-          <div class="mobile-menu-line"></div>
-          <div class="mobile-menu-line"></div>
+          <span class="mobile-menu-line"></span>
+          <span class="mobile-menu-line"></span>
+          <span class="mobile-menu-line"></span>
         </button>
         <nav class="mobile-menu__menu">
-            <a href="pages/students.html">students</a>
-            <a href="pages/tutors.html">tutors</a>
-            <a href="pages/contact.html">contact</a>
+          <a href="students.html">students</a>
+          <a href="tutors.html">tutors</a>
+          <a href="about.html">about</a>
         </nav>
-    </nav>
-
+      </nav>
     <section class="hero">
         <div class="intro">
             <h2>What is Tutor Finder?</h2>
@@ -84,7 +84,7 @@
         </div>
         <div class="qualified_text">
             <h2>Our tutors are highly qualified to assist you in your academic career.</h2>
-            <a href="signup.html">
+            <a href="students.html">
                 <button class="sites-button outline">find a tutor</button>
             </a>
         </div>

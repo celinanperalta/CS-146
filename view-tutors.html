@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="src/styles/tutors.css" />
+    <link rel="stylesheet" href="src/styles/navbar.css" />
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="index.html" class="nav__logo">
+            <img src="src/images/tutor-finder-logo.png" alt="Tutor Finder Logo" />
+            <p>tutor finder</p>
+        </a>
+        <ul class="nav__navigation">
+            <li>
+                <a href="students.html">students</a>
+            </li>
+            <li class="nav__navigation-sep">|</li>
+            <li>
+                <a href="tutors.html">tutors</a>
+            </li>
+            <li class="nav__navigation-sep">|</li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+        </ul>
+        <div class="nav__login">
+            <div class="nav__login--info">
+                <p>Hailey</p>
+                <p class="nav__login--info-type">student</p>
+            </div>
+            <img src="src/images/profile-picture.jpg" alt="Profile Picture" />
+        </div>
+        <button class="mobile-menu__open" id="menu_btn">
+            menu
+            <span class="mobile-menu-line"></span>
+            <span class="mobile-menu-line"></span>
+            <span class="mobile-menu-line"></span>
+        </button>
+        <nav class="mobile-menu__menu">
+            <a href="students.html">students</a>
+            <a href="tutors.html">tutors</a>
+            <a href="about.html">about</a>
+        </nav>
+    </nav>
+    </section>
+    <section class="hero" id="availabletutors">
+        <!-- <img alt="map" src="src/images/map.jpg" /> -->
+        <div class="profiles">
+            <ul class="profile">
+                <img class="hero" alt="amanda" id="profile__img" src="src/images/profile-picture.jpg" />
+                <li class="header">Amanda</li>
+                <li class="grey"> $20 / hr</li>
+                <li class="grey"> Specializes in: Differential calculus </li>
+            </ul>
+            <ul class="profile">
+                <img class="hero" alt="brett" id="profile__img" src="src/images/profile-picture2.jpg" />
+                <li class="header">Brett</li>
+                <li class="grey"> $15 / hr</li>
+                <li class="grey"> Specializes in: Language Arts</li>
+            </ul>
+            <ul class="profile">
+                <img class="hero" alt="amanda" id="profile__img" src="src/images/profile-picture3.jpg" />
+                <li class="header">Kanye</li>
+                <li class="grey"> $10 / half hr</li>
+                <li class="grey"> Specializes in: Computer Science</li>
+            </ul>
+            <ul class="profile">
+                <img class="hero" alt="brett" id="profile__img" src="src/images/profile-picture2.jpg" />
+                <li class="header">Brett</li>
+                <li class="grey"> $15 / hr</li>
+                <li class="grey"> Specializes in: Language Arts</li>
+            </ul>
+        </div>
+    </section>
+    <script src="../src/scripts/app.js" async defer></script>
+</body>
+
+</html>
