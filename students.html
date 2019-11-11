@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -69,7 +70,7 @@
           </label>
         </div>
         <div class="signup__form-row">
-          <input type="number" name="Zip Code" id="sf-zip" />
+          <input type="number" name="Zip Code" id="sf-zip" required />
           <label class="signup__form-row-label">
             Zip Code*
           </label>
@@ -88,6 +89,7 @@
         </div>
         <div class="signup__form-row">
           <select required>
+            <option value="">Choose...</option>
             <option value="5">5 miles</option>
             <option value="10">10 miles</option>
             <option value="15">15 miles</option>

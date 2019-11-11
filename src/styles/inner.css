@@ -90,7 +90,7 @@ a {
 }
 
 .signup__form-row.md {
-  width: 50%;
+  width: calc(50% - 4rem);
 }
 
 .signup__form-row.lg {

@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>TutorFinder</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="src/styles/tutors.css" />
+    <link rel="stylesheet" href="src/styles/inner.css" />
     <link rel="stylesheet" href="src/styles/nav.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <nav class="nav">
       <a href="index.html" class="nav__logo">
@@ -46,52 +47,72 @@
         <span class="mobile-menu-line"></span>
       </button>
       <nav class="mobile-menu__menu">
-        <a href="pages/students.html">students</a>
-        <a href="pages/tutors.html">tutors</a>
-        <a href="pages/contact.html">contact</a>
+        <a href="students.html">students</a>
+        <a href="tutors.html">tutors</a>
+        <a href="contact.html">contact</a>
       </nav>
     </nav>
-    <section class="hero" id="availabletutors">
-      <img alt="map" src="src/images/map.jpg" />
-      <div class="columns">
-        <ul class="profile">
-          <img
-            class="hero"
-            alt="amanda"
-            id="profile__img"
-            src="src/images/profile-picture.jpg"
-          />
-          <li class="header">Amanda</li>
-          <li class="grey">$20 / hr</li>
-          <li class="grey">Specializes in: Differential calculus</li>
-        </ul>
-      </div>
-      <div class="columns">
-        <ul class="profile">
-          <img
-            class="hero"
-            alt="brett"
-            id="profile__img"
-            src="src/images/profile-picture2.jpg"
-          />
-          <li class="header">Brett</li>
-          <li class="grey">$15 / hr</li>
-          <li class="grey">Specializes in: Language Arts</li>
-        </ul>
-      </div>
-      <div class="columns">
-        <ul class="profile">
-          <img
-            class="hero"
-            alt="amanda"
-            id="profile__img"
-            src="src/images/profile-picture3.jpg"
-          />
-          <li class="header">Kanye</li>
-          <li class="grey">$10 / half hr</li>
-          <li class="grey">Specializes in: Computer Science</li>
-        </ul>
-      </div>
+    <section class="signup">
+      <div class="signup__overlay"></div>
+      <img
+        alt="Man teaching in front of a computer"
+        src="src/images/tutors-bg.jpg"
+      />
+      <h2 class="signup__title">find <span>students.</span></h2>
+      <form action="#" method="post" class="signup__form">
+        <div class="signup__form-row">
+          <input type="text" name="Name" id="sf-name" required />
+          <label class="signup__form-row-label">
+            Name *
+          </label>
+        </div>
+        <div class="signup__form-row">
+          <input type="email" name="Email" id="sf-email" />
+          <label class="signup__form-row-label">
+            Email *
+          </label>
+        </div>
+        <div class="signup__form-row">
+          <input type="number" name="Zip Code" id="sf-zip" required />
+          <label class="signup__form-row-label">
+            Zip Code*
+          </label>
+        </div>
+        <div class="signup__form-row md">
+          <select required>
+            <option value="">Choose...</option>
+            <option value="5">5 miles</option>
+            <option value="10">10 miles</option>
+            <option value="15">15 miles</option>
+            <option value="20">20 miles</option>
+            <option value="25">25 miles</option>
+          </select>
+          <label class="signup__form-row-label">
+            Maximum Distance
+          </label>
+        </div>
+        <div class="signup__form-row md">
+          <input type="text" name="School" id="sf-school" />
+          <label class="signup__form-row-label">
+            Associated School (if any)
+          </label>
+        </div>
+        <div class="signup__form-row lg radio">
+          <label class="signup__form-row-label"> Your Topics </label><br />
+          <input type="radio" name="english" value="english" /> English <br />
+          <input type="radio" name="math" value="math" /> Math <br />
+          <input type="radio" name="biology" value="biology" /> Biology <br />
+          <input type="radio" name="chemistry" value="chemistry" /> Chemistry
+          <br />
+          <input type="radio" name="physics" value="physics" /> Physics <br />
+          <input type="radio" name="history" value="history" /> History <br />
+        </div>
+        <div class="signup__form-row lg submit">
+          <button class="signup__form-row-button sites-button red">
+            find students
+          </button>
+        </div>
+      </form>
     </section>
     <script src="src/scripts/navbar.js" async defer></script>
   </body>
