@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>TutorFinder | Find a Tutor</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="src/styles/nav.css" />
     <link rel="stylesheet" href="src/styles/app.css" />
     <link rel="stylesheet" href="src/styles/signup.css" />
     <link
@@ -21,46 +22,37 @@
         <img src="src/images/tutor-finder-logo.png" alt="Tutor Finder Logo" />
         <p>tutor finder</p>
       </a>
-      <div id="nav_links">
-        <ul class="nav__navigation">
-          <li>
-            <a href="pages/students.html">students</a>
-          </li>
-          <!-- <span>|</span> -->
-          <li>
-            <a href="pages/tutors.html">tutors</a>
-          </li>
-          <!-- <span>|</span> -->
-          <li>
-            <a href="pages/contact.html">contact</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="nav__navigation">
+        <li>
+          <a href="students.html">students</a>
+        </li>
+        <li class="nav__navigation-sep">|</li>
+        <li>
+          <a href="tutors.html">tutors</a>
+        </li>
+        <li class="nav__navigation-sep">|</li>
+        <li>
+          <a href="contact.html">contact</a>
+        </li>
+      </ul>
       <div class="nav__login">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
-          >&#9776;</a
-        >
         <div class="nav__login--info">
           <p>Hailey</p>
           <p class="nav__login--info-type">student</p>
         </div>
-        <img src="src/images/profile-picture.jpg" alt="Profile picture" />
+        <img src="src/images/profile-picture.jpg" alt="Profile Picture" />
       </div>
-    </nav>
-    <nav class="res__nav">
-      <ul>
-        <li>
-          <a href="pages/students.html">students</a>
-        </li>
-        <!-- <span>|</span> -->
-        <li>
-          <a href="pages/tutors.html">tutors</a>
-        </li>
-        <!-- <span>|</span> -->
-        <li>
-          <a href="pages/contact.html">contact</a>
-        </li>
-      </ul>
+      <button class="mobile-menu__open" id="menu_btn">
+        menu
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+      </button>
+      <nav class="mobile-menu__menu">
+        <a href="pages/students.html">students</a>
+        <a href="pages/tutors.html">tutors</a>
+        <a href="pages/contact.html">contact</a>
+      </nav>
     </nav>
     <div class="signup-form">
       <form id="signup" method="POST">
