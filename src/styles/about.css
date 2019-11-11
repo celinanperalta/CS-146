@@ -74,6 +74,7 @@ body {
 }
 
 .nav__login--info {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,6 +134,16 @@ body {
     width: 100%;
     height: 100%;
     transition: all 0.2s ease-in-out;
+=======
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1 !important;
+  /* z-index: 2; */
+>>>>>>> 1d6447c67c80b3dceaeab01aa5e987ace84684b1
 }
 
 .mobile-menu__menu a:hover {
@@ -385,7 +396,81 @@ body {
 }
 
 .qualified_text button {
+<<<<<<< HEAD
     background-color: #2093cd;
+=======
+  background-color: #2093cd;
+  border: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5rem 4rem;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  z-index: 20;
+  box-shadow: 0px 5px 15px black;
+}
+
+.qualified_text button:hover {
+  background-color: black;
+  box-shadow: 0px 5px 150px black;
+}
+
+@media only screen and (max-width: 998px) and (min-width: 400px) {
+  .hero {
+    height: auto;
+  }
+
+  .intro {
+    padding-top: 15rem;
+  }
+
+  .intro h2 {
+    font-size: 5rem;
+  }
+
+  .iPhone {
+    margin: 5rem auto;
+    width: 38.5vh;
+  }
+
+  .iPhone_image {
+    flex: 31%;
+  }
+
+  .summary_text p {
+    font-size: 6vh;
+  }
+
+  .night {
+    flex: 40%;
+  }
+
+  .finals_info {
+    flex: 60%;
+  }
+
+  .finals_info h2 {
+    font-size: 2rem;
+  }
+
+  .finals_info p {
+    font-size: 3vh;
+  }
+
+  .qualified_text {
+    width: 20rem;
+  }
+
+  .qualified_text h2 {
+    font-size: 6vh;
+  }
+
+  .qualified_text button {
+    background-color: #0c445f;
+>>>>>>> 1d6447c67c80b3dceaeab01aa5e987ace84684b1
     border: none;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -397,65 +482,79 @@ body {
     transition: 0.2s ease-in-out;
     z-index: 20;
     box-shadow: 0px 5px 15px black;
-}
+  }
 
-.qualified_text button:hover {
+  .qualified_text button:hover {
     background-color: black;
     box-shadow: 0px 5px 150px black;
+  }
 }
 
-@media only screen and (max-width: 998px) and (min-width: 400px) {
+  @media only screen and (max-width: 998px) and (min-width: 400px) {
     .hero {
-        height: auto;
+      height: auto;
     }
+
     .intro {
-        padding-top: 15rem;
+      padding-top: 15rem;
     }
+
     .intro h2 {
-        font-size: 5rem;
+      font-size: 5rem;
     }
+
     .iPhone {
-        margin: 5rem auto;
-        width: 38.5vh;
+      margin: 5rem auto;
+      width: 38.5vh;
     }
+
     .iPhone_image {
-        flex: 31%;
+      flex: 31%;
     }
+
     .summary_text p {
-        font-size: 6vh;
+      font-size: 6vh;
     }
+
     .night {
-        flex: 40%;
+      flex: 40%;
     }
+
     .finals_info {
-        flex: 60%;
+      flex: 60%;
     }
+
     .finals_info h2 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
+
     .finals_info p {
-        font-size: 3vh;
+      font-size: 3vh;
     }
+
     .qualified_text {
-        width: 20rem;
+      width: 20rem;
     }
+
     .qualified_text h2 {
-        font-size: 5vh;
+      font-size: 5vh;
     }
+
     .qualified_text button {
-        background-color: #0c445f;
-        border: none;
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 1rem;
-        padding: 1.5rem 4rem;
-        position: relative;
-        transition: 0.2s ease-in-out;
-        z-index: 20;
-        box-shadow: 0px 5px 15px black;
+      background-color: #0c445f;
+      border: none;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 1.5rem 4rem;
+      position: relative;
+      transition: 0.2s ease-in-out;
+      z-index: 20;
+      box-shadow: 0px 5px 15px black;
     }
+<<<<<<< HEAD
 }
 
 @media only screen and (max-width: 400px) {
@@ -521,3 +620,83 @@ body {
         box-shadow: 0px 5px 15px black;
     }
 }
+=======
+  }
+
+  @media only screen and (max-width: 400px) {
+    .hero {
+      height: auto;
+    }
+
+    .intro {
+      padding-top: 15rem;
+    }
+
+    .intro h2 {
+      font-size: 3.4rem;
+    }
+
+    .iPhone {
+      margin: 5rem auto;
+      width: 38.5vh;
+    }
+
+    .iPhone_image {
+      flex: 31%;
+    }
+
+    .summary_text p {
+      font-size: 5vh;
+    }
+
+    .night {
+      flex: 0%;
+      background-color: #000000;
+    }
+
+    .night img {
+      width: 0px;
+      height: 0px;
+      color: #000000;
+    }
+
+    .finals_info {
+      flex: 94%;
+      position: absolute;
+    }
+
+    .finals_info h2 {
+      font-size: 2rem;
+      padding-right: 2%;
+    }
+
+    .finals_info p {
+      font-size: 4vh;
+      padding-right: 2%;
+    }
+
+    .qualified_text {
+      width: 13rem;
+      padding-left: 4vh;
+    }
+
+    .qualified_text h2 {
+      font-size: 5vh;
+    }
+
+    .qualified_text button {
+      background-color: #0c445f;
+      border: none;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.75rem;
+      padding: 1.5rem 3rem;
+      position: relative;
+      transition: 0.2s ease-in-out;
+      z-index: 20;
+      box-shadow: 0px 5px 15px black;
+    }
+  }
+>>>>>>> 1d6447c67c80b3dceaeab01aa5e987ace84684b1
