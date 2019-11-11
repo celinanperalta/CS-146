@@ -5,9 +5,10 @@ body {
 }
 
 .nav {
-    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    position: sticky;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     z-index: 50;
@@ -26,12 +27,13 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    padding-left: 1rem;
+    width: inherit;
 }
 
 .nav__logo img {
     width: 150px;
     margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 .nav__navigation {
@@ -67,7 +69,8 @@ body {
     display: flex;
     height: 100%;
     align-items: center;
-    padding-right: 1rem;
+    position: absolute;
+    right: 3.25rem;
 }
 
 .nav__login--info {
@@ -77,7 +80,7 @@ body {
     align-items: center;
     font-weight: normal;
     font-size: 1.5rem;
-    line-height: 1;
+    line-height: 2.4;
 }
 
 .nav__login img {
@@ -95,15 +98,122 @@ body {
     color: #2093cd;
 }
 
+.mobile-menu__open {
+    display: none;
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+.mobile-menu__open.active,
+.mobile-menu__open:hover {
+    background-color: #0d3c54;
+}
+
+.mobile-menu__menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.2s ease-in-out;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    background-color: #d6d6d6;
+    padding: 0;
+    width: 90%;
+}
+
+.mobile-menu__menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.mobile-menu__menu a:hover {
+    background-color: #adadad;
+}
+
+.mobile-menu__menu.opened {
+    max-height: inherit;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 999px) {
+    .nav__login {
+        display: none;
+    }
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        padding: 2rem 0;
+    }
+    .nav__navigation {
+        display: none;
+    }
+    .nav__logo {
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-menu__open {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-top: 2rem;
+        padding: 1rem 0rem;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        cursor: pointer;
+        background-color: #1a6992;
+    }
+    .mobile-menu-line {
+        background-color: white;
+        height: 2px;
+        width: 25px;
+        position: absolute;
+        top: 24px;
+        right: 20px;
+    }
+    .mobile-menu-line:nth-child(2) {
+        margin-top: 5px;
+        right: 25px;
+    }
+    .mobile-menu-line:nth-child(3) {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 460px) {
+    .nav__logo img {
+        width: 100px;
+    }
+    .nav__logo {
+        font-size: 0.8rem;
+    }
+}
+
 .hero {
     width: 100%;
-    height: 90vh;
+    height: 110vh;
     display: flex;
     flex-wrap: wrap;
     direction: row;
     border-bottom: 3px solid #111111;
     box-shadow: 5px 3px 5px #115482;
     justify-content: center;
+    position: inherit;
 }
 
 .iPhone_image {
@@ -119,6 +229,7 @@ body {
     height: auto;
     display: inherit;
     margin: auto 0px;
+    padding-top: 7vh;
 }
 
 .intro {
@@ -236,7 +347,6 @@ body {
 }
 
 .content {
-    position: absolute;
     margin: auto;
 }
 
@@ -299,7 +409,7 @@ body {
         height: auto;
     }
     .intro {
-        padding-top: 1rem;
+        padding-top: 15rem;
     }
     .intro h2 {
         font-size: 5rem;
@@ -312,7 +422,7 @@ body {
         flex: 31%;
     }
     .summary_text p {
-        font-size: 7vh;
+        font-size: 6vh;
     }
     .night {
         flex: 40%;
@@ -324,7 +434,7 @@ body {
         font-size: 2rem;
     }
     .finals_info p {
-        font-size: 4vh;
+        font-size: 3vh;
     }
     .qualified_text {
         width: 20rem;
@@ -341,6 +451,70 @@ body {
         font-weight: bold;
         font-size: 1rem;
         padding: 1.5rem 4rem;
+        position: relative;
+        transition: 0.2s ease-in-out;
+        z-index: 20;
+        box-shadow: 0px 5px 15px black;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .hero {
+        height: auto;
+    }
+    .intro {
+        padding-top: 15rem;
+    }
+    .intro h2 {
+        font-size: 3.4rem;
+    }
+    .iPhone {
+        margin: 5rem auto;
+        width: 38.5vh;
+    }
+    .iPhone_image {
+        flex: 31%;
+    }
+    .summary_text p {
+        font-size: 5vh;
+    }
+    .night {
+        flex: 0%;
+        background-color: #000000;
+    }
+    .night img {
+        width: 0px;
+        height: 0px;
+        color: #000000;
+    }
+    .finals_info {
+        flex: 94%;
+        position: absolute;
+    }
+    .finals_info h2 {
+        font-size: 2rem;
+        padding-right: 2%;
+    }
+    .finals_info p {
+        font-size: 4vh;
+        padding-right: 2%;
+    }
+    .qualified_text {
+        width: 13rem;
+        padding-left: 4vh;
+    }
+    .qualified_text h2 {
+        font-size: 5vh;
+    }
+    .qualified_text button {
+        background-color: #0c445f;
+        border: none;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.75rem;
+        padding: 1.5rem 3rem;
         position: relative;
         transition: 0.2s ease-in-out;
         z-index: 20;
