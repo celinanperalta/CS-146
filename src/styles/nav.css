@@ -208,3 +208,9 @@
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .mobile-menu__menu {
+    display: none;
+  }
+}

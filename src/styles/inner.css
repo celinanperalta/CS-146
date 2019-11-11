@@ -141,4 +141,8 @@ a {
   .signup__title {
     font-size: 2rem;
   }
+
+  .signup__form-row.md {
+    width: 100%;
+  }
 }
