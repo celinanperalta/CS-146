@@ -159,6 +159,10 @@ a {
   .contact__title:first-of-type {
     margin-top: 20rem;
   }
+
+  .contact {
+    height: inherit;
+  }
 }
 
 @media (max-width: 540px) {
