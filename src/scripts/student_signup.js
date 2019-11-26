@@ -23,6 +23,13 @@ function getStudentQueryString() {
 
     var queryString = "?name=" + name + "&zip=" + zip + "&subjects=" + checkedSubjects + "&distance=" + distance;
     console.log("isn't this so secure");
+
+    sessionStorage.setItem("name", name);
+    sessionStorage.setItem("email", name);
+    sessionStorage.setItem("zip", zip);
+    sessionStorage.setItem("subjects", subjects);
+    sessionStorage.setItem("distance", distance);
+
     return queryString;
 }
 
@@ -30,7 +37,7 @@ window.addEventListener("load",function() {
     document.getElementById("student__signup").addEventListener("submit",function(e) {
         $(function () { 
             queryString = getStudentQueryString();
-            window.location.href="view-tutors.html" + queryString;
+            window.location.href="view-tutors.html";
         }); 
     });
   });

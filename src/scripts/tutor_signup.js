@@ -21,6 +21,13 @@ function getTutorQueryString() {
     email.replace('\.', "%2E");
     email.replace('\@', "%40");
 
+    sessionStorage.setItem("t_name", name);
+    sessionStorage.setItem("t_email", name);
+    sessionStorage.setItem("t_zip", zip);
+    sessionStorage.setItem("t_subjects", subjects);
+    sessionStorage.setItem("t_school", school);
+    sessionStorage.setItem("t_distance", distance);
+
     var queryString = "?name=" + name + "&zip=" + zip + "&subjects=" + checkedSubjects + "&distance=" + distance + "&school=" + school;
     console.log("isn't this so secure");
     return queryString;
