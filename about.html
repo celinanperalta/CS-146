@@ -8,6 +8,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="src/styles/about.css" />
+    <link rel="stylesheet" href="src/styles/nav.css" />
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet" />
 </head>
 
@@ -21,11 +22,11 @@
             <li>
                 <a href="students.html">students</a>
             </li>
-            <span>|</span>
+            <li class="nav__navigation-sep">|</li>
             <li>
                 <a href="tutors.html">tutors</a>
             </li>
-            <span>|</span>
+            <li class="nav__navigation-sep">|</li>
             <li>
                 <a href="about.html">about</a>
             </li>
@@ -35,28 +36,26 @@
                 <p>Hailey</p>
                 <p class="nav__login--info-type">student</p>
             </div>
-            <img src="src/images/profile-picture.jpg" alt="Profile picture" />
+            <img src="src/images/profile-picture.jpg" alt="Profile Picture" />
         </div>
         <button class="mobile-menu__open" id="menu_btn">
-          menu
-          <div class="mobile-menu-line"></div>
-          <div class="mobile-menu-line"></div>
-          <div class="mobile-menu-line"></div>
-        </button>
+        menu
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+      </button>
         <nav class="mobile-menu__menu">
-            <a href="pages/students.html">students</a>
-            <a href="pages/tutors.html">tutors</a>
-            <a href="pages/about.html">about</a>
+            <a href="students.html">students</a>
+            <a href="tutors.html">tutors</a>
+            <a href="about.html">about</a>
         </nav>
     </nav>
 
     <section class="hero">
-        <div class="intro">
+        <div class="content">
             <h2>What is Tutor Finder?</h2>
             <!--<p>Tutor Finder will help you find the best tutor in the shortest time. We let you chose what tutor you want for whatever subject you need!</p> -->
-        </div>
-        <div class="iPhone_image">
-            <img class="iPhone" src="src/images/iPhoneTF.jpg" alt="App demo" />
+            <img class="iPhone_image" src="src/images/iPhoneTF.jpg" alt="App demo" />
         </div>
     </section>
     <section class="summary">
@@ -72,10 +71,8 @@
             <img src="src/images/late_night_study.png" alt="Student studing at night" />
         </div>
         <div class="finals_info">
-            <div class="content">
-                <h2>Have a final the next day?</h2>
-                <p>One of Tutor Finder's best features is the possibilty to find a tutor at the last second. You can find a tutor and schedule a one night study session the same night!</p>
-            </div>
+            <h2>Have a final the next day?</h2>
+            <p>One of Tutor Finder's best features is the possibilty to find a tutor at the last second. You can find a tutor and schedule a one night study session the same night!</p>
         </div>
     </section>
     <section class="qualified_tutors">
@@ -89,8 +86,7 @@
             </a>
         </div>
     </section>
-    <script src="src/scripts/app.js" async defer>
-    </script>
+    <script src="src/scripts/navbar.js" async defer></script>
 </body>
 
 </html>
