@@ -129,7 +129,7 @@ body {
 }
 
 
-@media screen and (max-width: 998px) and (min-width: 400px) {
+@media screen and (max-width: 998px) and (min-width: 500px) {
   .profiles {
     display: flex;
     flex-wrap: wrap;
@@ -138,10 +138,14 @@ body {
 
   .profile {
     flex: 0 1 calc(50% - 1em);
+    margin-top: 10vw;
+  }
+  #availabletutors {
+    padding-top: 200px;
   }
 }
 
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 499px) {
   .profiles {
     display: flex;
     flex-wrap: wrap;
@@ -150,6 +154,11 @@ body {
 
   .profile {
     flex: 0 1 calc(100% - 1em);
+    margin-top: 10vw;
+  }
+
+  #availabletutors {
+    padding-top: 200px;
   }
 
 }
