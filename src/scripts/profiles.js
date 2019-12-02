@@ -4,7 +4,7 @@ class Profile {
         this.__zip = zip;
         this.__subjects = subjects;
         this.__distance = distance;
-        this.__img_path = img_path;
+        this.__img_path = "src/images/" + img_path;
     }
     get name() {
         return this.__name;
@@ -78,17 +78,17 @@ var students = []
 
 
 var tutorProfiles = [
-    "Amanda;07030;Math,English;10;src/images/profile-picture2.jpg;20",
-    "Brett;07030;English;10;src/images/profile-picture2.jpg;15",
-    "Kanye;07030;Computer Science;10;src/images/profile-picture2.jpg;10",
-    "Claire;07030;Physics;10;src/images/profile-picture2.jpg;15"
+    "Amanda;07030;Math,English;10;profile-picture2.jpg;20",
+    "Brett;07030;English;10;profile-picture2.jpg;15",
+    "Kanye;07030;Computer Science;10;profile-picture2.jpg;10",
+    "Claire;07030;Physics;10;profile-picture2.jpg;15"
 ];
 
 var studentProfiles = [
-    "Amanda;07030;Math,English;10;src/images/profile-picture2.jpg;11",
-    "Brett;07030;English;10;src/images/profile-picture2.jpg;12",
-    "Kanye;07030;Computer Science;10;src/images/profile-picture2.jpg;10",
-    "Claire;07030;Physics;10;src/images/profile-picture2.jpg;9"
+    "Amanda;07030;Math,English;10;profile-picture2.jpg;11",
+    "Brett;07030;English;10;profile-picture2.jpg;12",
+    "Kanye;07030;Computer Science;10;profile-picture2.jpg;10",
+    "Claire;07030;Physics;10;profile-picture2.jpg;9"
 ];
 
 function generateProfile(profile) {
@@ -140,6 +140,19 @@ function generateProfile(profile) {
 function updateUserInfo(name, type) {
     document.getElementById("current-user-name").innerText = name;
     document.getElementById("current-user-type").innerText = type;
+}
+
+function applyFilters(profileList, isTutorList, filters) {
+    if (isTutorList) {
+        //filters: distance, subject, price
+        var results = tutors.filter(function (el) {
+            //TODO
+            return el.price <= filters.price;
+        });
+    } else {
+        //filters: distance, subject, grade
+    }
+
 }
 
 window.addEventListener("load", function () {
