@@ -107,7 +107,7 @@ function generateProfile(profile) {
 
     var subjects = document.createElement("div");
     subjects.className = "grey";
-    var subjectsContent = document.createTextNode("Specializes in: " + profile.prettyPrintSubjects());
+    var subjectsContent = document.createTextNode("Subjects: " + profile.prettyPrintSubjects());
     subjects.appendChild(subjectsContent);
 
     var price = null;
@@ -137,35 +137,33 @@ function generateProfile(profile) {
 
 }
 
-
+function updateUserInfo(name, type) {
+    document.getElementById("current-user-name").innerText = name;
+    document.getElementById("current-user-type").innerText = type;
+}
 
 window.addEventListener("load", function () {
     //    var pageName = location.href.split("/".slice(-1));
 
-
-    if (sessionStorage.isTutor) {
+    if (sessionStorage.isTutor == "false") {
         for (var i = 0; i != tutorProfiles.length; ++i) {
             var params = tutorProfiles[i].split(";");
             var subjects = params[2].split(",");
-            console.log(subjects);
             tutors.push(new TutorProfile(params[0], params[1], subjects, params[3], params[4], params[5]));
         }
         for (var i = 0; i != tutors.length; ++i) {
             generateProfile(tutors[i]);
-            // console.log(tutors[i]);
         }
+        updateUserInfo(sessionStorage.name, "student");
     } else {
         for (var i = 0; i != studentProfiles.length; ++i) {
             var params = studentProfiles[i].split(";");
             var subjects = params[2].split(",");
-            console.log(subjects);
             students.push(new StudentProfile(params[0], params[1], subjects, params[3], params[4], params[5]));
         }
         for (var i = 0; i != students.length; ++i) {
             generateProfile(students[i]);
-            // console.log(tutors[i]);
         }
+        updateUserInfo(sessionStorage.t_name, "tutor");
     }
-
-
 });

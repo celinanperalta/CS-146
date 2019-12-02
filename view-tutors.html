@@ -33,10 +33,10 @@
         </ul>
         <div class="nav__login">
             <div class="nav__login--info">
-                <p>Hailey</p>
-                <p class="nav__login--info-type">student</p>
+                <p id="current-user-name">Hailey</p>
+                <p id="current-user-type" class="nav__login--info-type">student</p>
             </div>
-            <img src="src/images/profile-picture.jpg" alt="Profile Picture" />
+            <img src="src/images/blankuser.png" alt="Profile Picture" />
         </div>
         <button class="mobile-menu__open" id="menu_btn">
             menu
@@ -52,35 +52,11 @@
     </nav>
     <section class="hero" id="availabletutors">
         <!-- <img alt="map" src="src/images/map.jpg" /> -->
-        <div class="profiles">
-            <div class="profile">
-                <img class="hero" alt="amanda" id="profile__img1" src="src/images/profile-picture.jpg" />
-                <div class="header">Amanda</div>
-                <div class="grey"> $20 / hr</div>
-                <div class="grey"> Specializes in: Differential calculus </div>
-            </div>
-            <div class="profile">
-                <img class="hero" alt="brett" id="profile__img2" src="src/images/profile-picture2.jpg" />
-                <div class="header">Brett</div>
-                <div class="grey"> $15 / hr</div>
-                <div class="grey"> Specializes in: Language Arts</div>
-            </div>
-            <div class="profile">
-                <img class="hero" alt="amanda" id="profile__img3" src="src/images/profile-picture3.jpg" />
-                <div class="header">Kanye</div>
-                <div class="grey"> $10 / half hr</div>
-                <div class="grey"> Specializes in: Computer Science</div>
-            </div>
-            <div class="profile">
-                <img class="hero" alt="brett" id="profile__img4" src="src/images/profile-picture2.jpg" />
-                <div class="header">Brett</div>
-                <div class="grey"> $15 / hr</div>
-                <div class="grey"> Specializes in: Language Arts</div>
-            </div>
-        </div>
+        <div id="profiles" class="profiles">
         </div>
     </section>
     <script src="../src/scripts/app.js" async defer></script>
+    <script src="./src/scripts/profiles.js" async defer></script>
 </body>
 
 </html>

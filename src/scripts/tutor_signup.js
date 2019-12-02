@@ -38,7 +38,7 @@ window.addEventListener("load",function() {
     document.getElementById("tutor__signup").addEventListener("submit",function(e) {
         $(function () { 
             queryString = getTutorQueryString();
-            sessionStorage.isTutor = true;
+            sessionStorage.setItem("isTutor", true);
             window.location.href="view-tutors.html" + queryString;
         }); 
     });
