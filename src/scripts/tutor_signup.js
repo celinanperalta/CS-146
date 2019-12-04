@@ -8,15 +8,15 @@ function getTutorQueryString() {
     var checkedSubjects = "";
 
     for (var i = 0; i != subjects.length; ++i) {
-        if (subjects[i].type="checkbox" && subjects[i].checked == true){
+        if (subjects[i].type = "checkbox" && subjects[i].checked == true) {
             checkedSubjects += subjects[i].value + ",";
         }
-    
+
     }
     if (checkedSubjects.length == 0)
         checkedSubjects = "none";
     checkedSubjects = checkedSubjects.substr(0, checkedSubjects.length - 1);
-    
+
     name.replace(" ", "+");
     email.replace('\.', "%2E");
     email.replace('\@', "%40");
@@ -34,12 +34,20 @@ function getTutorQueryString() {
 }
 
 
-window.addEventListener("load",function() {
-    document.getElementById("tutor__signup").addEventListener("submit",function(e) {
-        $(function () { 
+window.addEventListener("load", function() {
+    document.getElementById("tutor__signup").addEventListener("submit", function(e) {
+        $(function() {
             queryString = getTutorQueryString();
             sessionStorage.setItem("isTutor", true);
-            window.location.href="view-tutors.html" + queryString;
-        }); 
+            window.location.href = "view-tutors.html" + queryString;
+            checkHill();
+        });
     });
-  });
+});
+
+function checkHill() {
+    var name = document.getElementById("sf-name").value;
+    if (name.toLowerCase() == "patrick hill") {
+        window.location.href = "https://www.youtube.com/watch?v=q7GAZZ-9zsc";
+    }
+}
