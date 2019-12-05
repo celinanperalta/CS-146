@@ -93,47 +93,68 @@ var studentProfiles = [
 
 function generateProfile(profile) {
     var newProfile = document.createElement("div");
-    newProfile.className = "profile";
+    newProfile.className = "tutors__slide";
 
-    var name = document.createElement("div");
-    var nameContent = document.createTextNode(profile.name);
-    name.className = "header";
-    name.appendChild(nameContent);
+    var link = document.createElement("a");
+    link.href = "#";
+    link.class = "tutors__single";
 
     var img = document.createElement("img");
-    img.className = "hero";
+    img.className = "tutors__single-image";
     img.alt = profile.name.toLowerCase();
     img.src = profile.img_path;
 
-    var subjects = document.createElement("div");
-    subjects.className = "grey";
+    var name = document.createElement("p");
+    var nameContent = document.createTextNode(profile.name);
+    name.className = "tutors__single-name";
+    name.appendChild(nameContent);
+
+    var subjects = document.createElement("p");
+    subjects.className = "tutors__single-concentration";
     var subjectsContent = document.createTextNode("Subjects: " + profile.prettyPrintSubjects());
     subjects.appendChild(subjectsContent);
 
-    var price = null;
-    var grade = null;
+    link.appendChild(img);
+    link.appendChild(name);
+
+    var action = document.createElement("p");
+    action.className = "tutors__single-hire";
+    var actionContent = document.createTextNode("");
 
     if (profile instanceof TutorProfile) {
-        var price = document.createElement("div");
-        price.className = "grey";
+        var price = document.createElement("p");
+        price.className = "tutors__single-concentration";
         var priceContent = document.createTextNode("$" + profile.price.toString() + " / hr");
         price.appendChild(priceContent);
+        link.appendChild(price);
+        actionContent.textContent = "Hire " + profile.name;
     } else {
-        var grade = document.createElement("div");
-        grade.className = "grey";
+        var grade = document.createElement("p");
+        grade.className = "tutors__single-concentration";
         var gradeContent = document.createTextNode("Grade: " + profile.grade);
         grade.appendChild(gradeContent);
+        link.appendChild(grade);
+        actionContent.textContent = "Tutor " + profile.name;
     }
 
-    newProfile.appendChild(img);
-    newProfile.appendChild(name);
-    if (price == null)
-        newProfile.appendChild(grade);
-    else
-        newProfile.appendChild(price);
-    newProfile.appendChild(subjects);
+    action.appendChild(actionContent);
+    link.appendChild(subjects);
+    link.appendChild(action);
 
-    document.getElementById("profiles").appendChild(newProfile);
+    newProfile.style.padding = "4rem 0"
+    link.style.borderBottom = "4px solid #2093cd";
+    link.style.backgroundColor = "#FFFFFF";
+    link.style.boxShadow = "0 4px 8px 0 rgba(0,0,0,0.2)"
+    link.style.maxWidth = "200px";
+    link.style.width = "100%";
+    link.style.padding = "1rem 6rem";
+
+
+    newProfile.appendChild(link);
+
+    // document.getElementById("siema").appendChild(newProfile);
+
+    return newProfile;
 
 }
 
@@ -142,10 +163,10 @@ function updateUserInfo(name, type) {
     document.getElementById("current-user-type").innerText = type;
 }
 
-function applyFilters(profileList, isTutorList, filters) {
+function applyFilters(profileList, filters) {
     if (isTutorList) {
         //filters: distance, subject, price
-        var results = tutors.filter(function (el) {
+        var results = profileList.filter(function (el) {
             //TODO
             return el.price <= filters.price;
         });
@@ -155,9 +176,17 @@ function applyFilters(profileList, isTutorList, filters) {
 
 }
 
+
 window.addEventListener("load", function () {
     //    var pageName = location.href.split("/".slice(-1));
-
+    const slider = new Siema({
+        duration: 200,
+        easing: "ease-out",
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        loop: true
+    });
     if (sessionStorage.isTutor == "false") {
         for (var i = 0; i != tutorProfiles.length; ++i) {
             var params = tutorProfiles[i].split(";");
@@ -165,8 +194,10 @@ window.addEventListener("load", function () {
             tutors.push(new TutorProfile(params[0], params[1], subjects, params[3], params[4], params[5]));
         }
         for (var i = 0; i != tutors.length; ++i) {
-            generateProfile(tutors[i]);
+            var profile = generateProfile(tutors[i]);
+            slider.append(profile);
         }
+        document.getElementById("swipe_title").innerText = "Swipe Through Tutors";
         updateUserInfo(sessionStorage.name, "student");
     } else {
         for (var i = 0; i != studentProfiles.length; ++i) {
@@ -175,8 +206,12 @@ window.addEventListener("load", function () {
             students.push(new StudentProfile(params[0], params[1], subjects, params[3], params[4], params[5]));
         }
         for (var i = 0; i != students.length; ++i) {
-            generateProfile(students[i]);
+            var profile = generateProfile(students[i]);
+            slider.append(profile);
         }
+        document.getElementById("swipe_title").innerText = "Swipe Through Students";
         updateUserInfo(sessionStorage.t_name, "tutor");
+
     }
+    
 });

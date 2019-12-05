@@ -7,6 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="src/styles/tutors.css" />
+    <link rel="stylesheet" href="src/styles/app.css" />
     <link rel="stylesheet" href="src/styles/nav.css" />
     <title>Tutors</title>
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet" />
@@ -32,8 +33,8 @@
             </li>
         </ul>
         <div class="nav__login">
-            <div class="nav__login--info">
-                <p id="current-user-name">Hailey</p>
+            <div id="current-user-name" class="nav__login--info">
+                <p>Hailey</p>
                 <p id="current-user-type" class="nav__login--info-type">student</p>
             </div>
             <img src="src/images/blankuser.png" alt="Profile Picture" />
@@ -50,13 +51,16 @@
             <a href="about.html">about</a>
         </nav>
     </nav>
-    <section class="hero" id="availabletutors">
-        <!-- <img alt="map" src="src/images/map.jpg" /> -->
-        <div id="profiles" class="profiles">
+    <section class="tutors">
+        <div id="swipe_title" class="tutors__swipe">Swipe Through Tutors</div>
+        <div id="siema" class="siema">
+            <div></div>
         </div>
-    </section>
-    <script src="../src/scripts/app.js" async defer></script>
-    <script src="./src/scripts/profiles.js" async defer></script>
+      </section>
+    <script src="src/scripts/app.js" async defer></script>
+    <script src="src/scripts/siema.min.js"></script>
+    <script src="src/scripts/profiles.js" async defer></script>
+    
 </body>
 
 </html>
