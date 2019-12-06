@@ -16,3 +16,14 @@ document.querySelectorAll('a[href^="#"]').forEach(el => {
     }
   });
 });
+
+window.addEventListener("load", () => {
+  new Siema({
+    duration: 200,
+    easing: "ease-out",
+    perPage: 1,
+    startIndex: 0,
+    draggable: true,
+    loop: true
+  });
+});
