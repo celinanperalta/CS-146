@@ -1,7 +1,9 @@
 function update() {
   if (!sessionStorage.name) {
-    document.getElementById("current-user-name").innerText = "Log In";
-  } else if (sessionStorage.isTutor == "false") {
+    document.getElementById("current-user-name").innerText = "Login";
+    return;
+  }
+  if (sessionStorage.isTutor == "false") {
     document.getElementById("current-user-name").href = null;
     document.getElementById("current-user-name").style.pointerEvents = "none";
     document.getElementById("current-user-name").innerText =
